@@ -4,6 +4,11 @@
   font-family: "Ramaraja", serif;
 }
 
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     overflow-x: hidden;
@@ -20,6 +25,12 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -174,7 +185,7 @@ copilot lading page style here
 .top-main-container .video video {
   background-color: #d9d9d9;
   width: 759px;
-  height: 354px;
+  height: 40vh;
 }
 @media screen and (min-width: 1390px) {
   .top-main-container .video video {
@@ -726,6 +737,9 @@ copilot lading page style here
 .justAbovFooter .under-content > div div ::-moz-placeholder {
   color: #fff;
 }
+.justAbovFooter .under-content > div div :-ms-input-placeholder {
+  color: #fff;
+}
 .justAbovFooter .under-content > div div ::placeholder {
   color: #fff;
 }
@@ -793,17 +807,31 @@ copilot lading page style here
 .footer-section > div:nth-child(2) > ul:nth-child(2) {
   margin-left: 180px;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .footer-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: unset;
+    align-items: center;
+  }
+  .footer-section > div {
+    width: 100%;
+    justify-content: center;
   }
   .footer-section > div:nth-child(1) {
     width: 100%;
-    margin-bottom: 50px;
+  }
+  .footer-section > div:nth-child(1) p {
+    width: 100%;
+  }
+  .footer-section > div:nth-child(1) div {
+    width: 100%;
   }
   .footer-section > div:nth-child(2) {
-    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer-section > div:nth-child(2) {
     display: flex;
     flex-direction: column;
   }

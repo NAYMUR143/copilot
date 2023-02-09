@@ -8,11 +8,18 @@
 //   font-family: Helvetica;
 //   src: url(/Helvetica-Bold.ttf);
 // }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     overflow-x: hidden;
   }
 }
+
 :root {
   --blck: #000000;
   --wht: #ffffff;
@@ -24,6 +31,12 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -193,7 +206,7 @@ copilot lading page style here
       background-color: #d9d9d9;
 
       width: 759px;
-      height: 354px;
+      height: 40vh;
     }
     @media screen and (min-width: 1390px) {
       video {
@@ -955,18 +968,35 @@ copilot lading page style here
     }
   }
 
-  @media screen and (max-width: 425px) {
-    flex-direction: column;
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
     justify-content: unset;
+    align-items: center;
+
+    > div {
+      width: 100%;
+      justify-content: center;
+    }
 
     > div:nth-child(1) {
       width: 100%;
-      margin-bottom: 50px;
+
+      p {
+        width: 100%;
+      }
+
+      div {
+        width: 100%;
+      }
     }
 
     > div:nth-child(2) {
-      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
 
+  @media screen and (max-width: 425px) {
+    > div:nth-child(2) {
       display: flex;
       flex-direction: column;
 

@@ -56,6 +56,7 @@ function TopSection() {
           </button>
         </div>
       </div>
+
       <div className="bg-blur">
         <div className="blur-2">
           <div>
